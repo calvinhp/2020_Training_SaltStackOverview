@@ -1,15 +1,22 @@
 ---
-title: SaltStack Overview
+title-prefix: Six Feet Up
+pagetitle: SaltStack Training
 author: Calvin Hendryx-Parker, CTO, Six Feet Up
+author-meta:
+    - Calvin Hendryx-Parker
 date: Purdue SaltStack 2020
-title-slide-attributes:
-  data-background-image: https://c1.staticflickr.com/9/8676/16153637729_6691c89094_o.jpg
-  data-background-size: contain
+date-meta: May 5, 2020
+keywords:
+    - Python
+    - Orchestration
+    - Configuration Management
+    - SaltStack
 ---
 
-# Master & Minions {data-background-image="https://c1.staticflickr.com/9/8676/16153637729_6691c89094_o.jpg"}
-
-#### Or The Dream of Python Automation
+# Master & Minions {.semi-filtered data-background-image="images/snake.jpg"}
+## Or The Dream of Python Automation
+#### Calvin Hendryx-Parker, CTO
+#### Six Feet Up
 
 ::: notes
 * Six Feet Up
@@ -19,57 +26,39 @@ title-slide-attributes:
 Python, Plone, Django
 :::
 
-# Certain things should be hand crafted.
-:::::::::::::: {.columns}
-::: {.column width="33%"}
-![](https://c2.staticflickr.com/2/1972/44030411775_40e01e6bb6_k.jpg)
-:::
-::: {.column width="33%"}
-![](https://c1.staticflickr.com/5/4072/4553716108_6c78c2d418_o.jpg)
-:::
-::: {.column width="33%"}
-![](https://c2.staticflickr.com/6/5080/7219645500_f79320f7ec_o.jpg)
-:::
-::::::::::::::
+# Certain things should be hand crafted. {data-background-image="https://c2.staticflickr.com/6/5080/7219645500_f79320f7ec_o.jpg"}
 
 ::: notes
- * Woodworking
- * Jewelry
  * Beverages
 :::
 
-# But Not Your Infrastructure
-![](https://c2.staticflickr.com/4/3727/10907456754_2c118f5584_o.jpg)
+# But Not Your Infrastructure {.center .semi-filtered data-background-image="https://c2.staticflickr.com/4/3727/10907456754_2c118f5584_o.jpg"}
 
 ::: notes
   But the age of handcrafted servers is over.
   The term bespoke should be reserved for clothing and not our servers that run an application.
 :::
 
-# Beautiful Unique Snowflakes are not reproducible.
-![](https://c2.staticflickr.com/4/3802/12006571534_7a81e7656e_o.jpg)
+# Beautiful Unique Snowflakes are not reproducible. {.semi-filtered data-background-image="https://c2.staticflickr.com/4/3802/12006571534_7a81e7656e_o.jpg"}
 
 ::: notes
   tidbit of trivia, the chances of a snowflake being exactly alike is 1 in 1 million trillion (that's a 1 followed by 18 zeros)
 :::
 
-# Pets
-![](https://c2.staticflickr.com/6/5233/5828169497_dff82c6543_o.jpg)
+# Pets {data-background-image="https://c2.staticflickr.com/6/5233/5828169497_dff82c6543_o.jpg"}
 
 ::: notes
 coined by Randy Bias after hearing a talk from Bill Baker on Scaling SQL Server
 :::
 
-# Cattle
-![](https://c1.staticflickr.com/9/8131/8714106252_4e66254faa_o.jpg)
+# Cattle {data-background-image="https://c1.staticflickr.com/9/8131/8714106252_4e66254faa_o.jpg"}
 
 ::: notes
 We are now in the world of DevOps and many non-cloud native applications have the ability to be deployed with cloud native tools.
  How do we take a beautiful handcrafted bare-metal server running our application to translate that into the cloud?
 :::
 
-# Rules of DevOps Club
-![](https://cdn-images-1.medium.com/max/2000/1*jEuin1LmfGAMnYPwplzQZg.png)
+# Rules of DevOps Club {data-background-image="https://cdn-images-1.medium.com/max/2000/1*jEuin1LmfGAMnYPwplzQZg.png"}
 
 * The first rule of DevOps Club is: You do not log into servers
 * The second rule of DevOps Club is: You do not log into servers
@@ -86,15 +75,13 @@ Credit to [Hacker News Post](https://news.ycombinator.com/item?id=8580906) on th
 For an actual interesting take on being a welcoming DevOps club, make sure to check out [Bridget Kromhout's Post](https://bridgetkromhout.com/blog/the-first-rule-of-devops-club://bridgetkromhout.com/blog/the-first-rule-of-devops-club/) on the subject.
 :::
 
-# Tools
-![](https://c1.staticflickr.com/7/6138/5980242616_6ce0a412b0_o.jpg)
+# Tools {data-background-image="https://c1.staticflickr.com/7/6138/5980242616_6ce0a412b0_o.jpg"}
 
 To enter the DevOps world, you need to know what tools are available to you.
 
 Python has many great tools available to use such as SaltStack and the AWS Boto3 library.
 
-# From the Closet to the Cloud
-![](https://c2.staticflickr.com/8/7063/13991487412_7d4a652f38_o.jpg)
+# From the Closet to the Cloud {data-background-image="https://c2.staticflickr.com/8/7063/13991487412_7d4a652f38_o.jpg"}
 
 ::: notes
 College of Engineering at Notre Dame has been hosting their main web site on a single server in a closet on campus since we deployed it for them back in 2011.
@@ -106,7 +93,7 @@ Perfect opportunity to take this aging single server hosting their site and impr
 
 # Single Server Monolith
 
-```
+``` {.stretch .small}
 ┌────────────────────────────────────┐
 │          Web/App/Database          │
 │    ┌───────────────────────────┐   │
@@ -132,24 +119,28 @@ Perfect opportunity to take this aging single server hosting their site and impr
 └────────────────────────────────────┘
 ```
 
-# Cloud Optimized
-![](https://c2.staticflickr.com/6/5484/11423341454_b51b661bc5_k.jpg)
-![right](images/ND AWS Proxy Chain.png)
+# Cloud Optimized {data-background-image="https://c2.staticflickr.com/6/5484/11423341454_b51b661bc5_k.jpg"}
+
+:::::::::::::: {.columns}
+::: {.column width="60%"}
+:::
+::: {.column width="40%"}
+![](images/ND AWS Proxy Chain.png){.plain height="500"}
+:::
+::::::::::::::
 
 
 ::: notes
 But how do we make it repeatable.
 :::
 
-# Automation
-![](https://c1.staticflickr.com/9/8662/16405965448_b06735c9f7_o.jpg)
+# Automation {data-background-image="https://c1.staticflickr.com/9/8662/16405965448_b06735c9f7_o.jpg"}
 
-# Enter SaltStack and Boto3
-![](https://c2.staticflickr.com/4/3025/2302759066_84935ab458_o.jpg)
+# Enter SaltStack and Boto3 {data-background-image="https://c2.staticflickr.com/4/3025/2302759066_84935ab458_o.jpg"}
 
 # Network End Goal
 
-```
+``` {.stretch .smaller}
 ┌─────────────────────────────────────────┐                ┌────────────────────────────────────┐
 │               control-vpc               │                │              prod-vpc              │
 │  ┌───────────────────────────────────┐  │                │  ┌───────────────────────────┐     │
@@ -192,8 +183,7 @@ But how do we make it repeatable.
                                                            └────────────────────────────────────┘
 ```
 
-# Bit of a Chicken and Egg Problem
-![](https://c2.staticflickr.com/8/7508/16136177877_b59f6a4585_k.jpg)
+# Bit of a Chicken and Egg Problem {data-background-image="https://c2.staticflickr.com/8/7508/16136177877_b59f6a4585_k.jpg"}
 
 ::: notes
 How do we get a fresh Salt master into a region to start building the rest of the infrastructure.
@@ -217,12 +207,17 @@ Protip: learn how to securely manage your AWS credentials, no one wants to be a 
 Six Feet Up uses LastPass and it can be a poormans secret store for API keys. Check out [lpass-env](https://github.com/luketurner/lpass-env)
 :::
 
-# Tool Tip
-
-TODO: switch to show 1Password and Vault
+# Tool Tip {data-background-image="https://live.staticflickr.com/4709/39538771734_888800273d_k.jpg"}
+## Keep your Secrets... Secret
 
 ```sh
+$ lpass login                  # LastPass
 $ $(lpass-env export 'AWS SFU Calvin')
+```
+
+```sh
+$ eval $(op signin sixfeetup)  # 1Password
+$ awsenv "AWS SFU Calvin"
 ```
 
 ```sh
@@ -232,8 +227,11 @@ AWS_SECRET_ACCESS_KEY=123jasdfadsOof9akayo5peey0cow
 AWS_DEFAULT_REGION=us-east-1
 ```
 
-# Bootstrap Continued
-![](https://c1.staticflickr.com/3/2594/4155223042_87b5663358_o.jpg)
+::: notes
+Would be preferrable to use Vault, but if you don't have it, not reason to not be safe
+:::
+
+# Bootstrap Continued {data-background-image="https://c1.staticflickr.com/3/2594/4155223042_87b5663358_o.jpg"}
 
 ```python
 # EC2
@@ -263,15 +261,13 @@ With one command, we are up and running and ready to really use Salt to automate
 Protip: You will have to sometimes put in some wait time in your scripts. For example, you can't associate an Elastic IP right away due to the asynchronous nature of AWS.
 :::
 
-# What is SaltStack?
-![](https://c2.staticflickr.com/6/5293/5498122887_fe0d1cfa97_b.jpg)
+# What is SaltStack? {data-background-image="https://c2.staticflickr.com/6/5293/5498122887_fe0d1cfa97_b.jpg"}
 
 ::: notes
 Event driven orchestration platform written in Python.
 :::
 
-# What sets Salt apart?
-![](images/bg-community-hero3x.original.png)
+# What sets Salt apart? {.semi-filtered data-background-image="images/bg-community-hero3x.original.png"}
 
 * Remote Execution
 * Event-Driven Orchestration
@@ -286,11 +282,9 @@ Combines many tools such as:
     * terraform for cloud provisioning
 :::
 
-# Lonely Minions
-![](images/depressed_minions.jpg)
+# Lonely Minions {.semi-filtered data-background-image="images/depressed_minions.jpg"}
 
-# Master and Minions
-![160%](images/bello.jpg)
+# Master and Minions {data-background-image="images/bello.jpg"}
 
 # Now We Orchestrate
 
@@ -306,7 +300,9 @@ $ salt-run state.orchestrate orch.deploy-environment pillarenv=test
 
 # Infrastructure (sans humans)
 
-```
+:::::::::::::: {.columns}
+::: {.column width="70%"}
+```{.stretch .smaller} 
 ┌─────────────────────────────────────────┐                ┌────────────────────────────────────┐
 │               control-vpc               │                │              prod-vpc              │
 │  ┌───────────────────────────────────┐  │                │  ┌───────────────────────────┐     │
@@ -348,22 +344,25 @@ $ salt-run state.orchestrate orch.deploy-environment pillarenv=test
                                                            │   └─────────────────────────────┘  │
                                                            └────────────────────────────────────┘
 ```
+:::
+::: {.column width="30%"}
+![](images/ND AWS Proxy Chain.png){.plain height="500"}
+:::
+::::::::::::::
 
-![right](images/ND AWS Proxy Chain.png)
+
 
 ::: notes
 Every aspect of the infrastructure is defined via Salt pillars and states.
 :::
 
-# Orchestrating New Code Releases
-![](https://c1.staticflickr.com/1/72/165372268_ff83a02fa7_o.jpg)
+# Orchestrating New Code Releases {data-background-image="https://c1.staticflickr.com/1/72/165372268_ff83a02fa7_o.jpg"}
 
 ::: notes
 Switch gears and talk about CNM
 :::
 
-# Zero Downtime Releases
-![](https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png)
+# Zero Downtime Releases {data-background-image="https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png"}
 
 
 ```yaml
@@ -379,8 +378,7 @@ stop-{{ app_server }}-varnish:
 ...
 ```
 
-# Prepare for the Release
-![](https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png)
+# Prepare for the Release {data-background-image="https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png"}
 
 ```yaml
 ...
@@ -393,8 +391,7 @@ stop-{{ app_server }}-instances:
     - tgt: {{ app_server }}
 ```
 
-# Optional Ad-Hoc Code Releases
-![](https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png)
+# Optional Ad-Hoc Code Releases {data-background-image="https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png"}
 
 ```yaml
 ...
@@ -417,8 +414,7 @@ checkout-code-{{ app_server }}:
 In the CNM environment, we use Salt to talk to the load balancer during releases to remove and add the instances as the code is released to them.
 :::
 
-# Handle Release Tasks
-![](https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png)
+# Handle Release Tasks {data-background-image="https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png"}
 
 
 ```yaml
@@ -434,10 +430,9 @@ run-buildout-{{ app_server }}:
       - {{ buildout_dir }}/env/bin/buildout -N
 ```
 
-# Handle Post Release Tasks
-![](https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png)
+# Handle Post Release Tasks {data-background-image="https://c2.staticflickr.com/4/3448/3746595205_fc31ac8012_o.png"}
 
-```yaml
+``` yaml
 # Install Gulp bits
 install-gulp-{{ app_server }}:
   salt.function:
@@ -459,8 +454,7 @@ run-gulp-{{ app_server }}:
         cwd: {{ theme_dir }}
 ```
 
-# Not Just for Releases
-![](http://upload.evocdn.co.uk/fruitnet/uploads/asset_image/2_1200434_e.jpg)
+# Not Just for Releases {data-background-image="http://upload.evocdn.co.uk/fruitnet/uploads/asset_image/2_1200434_e.jpg"}
 
 * Migrating Production Data back to Testing
 * Scheduled tasks such as Database Backups
@@ -504,27 +498,23 @@ Remember back to our Rules, we want to do everything we can to avoid logging int
 New Environments can be created in matters of minutes instead of wrestling for days to figure out how something was previously deployed and what handcrafted configurations were put in place.
 :::
 
-# Sounds too easy
-![](https://c1.staticflickr.com/1/229/498818720_73a25bdf70_o.jpg)
+# Sounds too easy {data-background-image="https://c1.staticflickr.com/1/229/498818720_73a25bdf70_o.jpg"}
 
 The road was bumpy for sure.
 
 Satisfying the rules for no special cases was tricky.
 
-# Mindfulness
-![left filtered](https://c1.staticflickr.com/5/4397/36076284124_134a37e792_o.jpg)
+# Mindfulness {.center data-background-image="https://c1.staticflickr.com/5/4397/36076284124_134a37e792_o.jpg"}
 
 > There should be one, and preferably only one, obvious way to do it.
 > Although that way may not be obvious at first unless you're Dutch.
--- _The Zen of Python_
+> 
+-- Tim Peters, The Zen of Python
 
-# The journey of 3 operating systems
-![](https://c1.staticflickr.com/5/4902/30826204837_7d745d224f_k.jpg)
+# The journey operating systems {data-background-image="https://c1.staticflickr.com/5/4902/30826204837_7d745d224f_k.jpg"}
 
 - `2a67758 Editing requirements to run properly on amazon linux`
-
 - `472d844 Refactoring to run CentOS 7 machines`
-
 - `dd67b7a Refactoring for FreeBSD`
 
 What happened here?
@@ -538,15 +528,13 @@ We needed newer versions of `wv` and `HAProxy` and the repositories included wit
 * Implement a CI strategy to test your infrastructure with tools like [Kitchen-Salt](https://github.com/saltstack/kitchen-salt)
 * Create or use tools to help you trace requests in the cloud <https://github.com/sixfeetup/aws-log-tools>
 
-# Living the Dream
-![110%](https://i.ytimg.com/vi/B8hrOv2ezag/maxresdefault.jpg)
+# Living the Dream {data-background-image="https://i.ytimg.com/vi/B8hrOv2ezag/maxresdefault.jpg"}
 
 ::: notes
 We are fulfilling the dream, the application runs in a much more Cloud Native Fashion.
 :::
 
-# Thanks!
-![](https://c1.staticflickr.com/1/92/239595034_d51a99ced1_o.jpg)
+# Questions? {data-background-image="https://c1.staticflickr.com/1/92/239595034_d51a99ced1_o.jpg"}
 
 ## <calvin@sixfeetup.com>
 
