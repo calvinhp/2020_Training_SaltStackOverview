@@ -228,7 +228,7 @@ AWS_DEFAULT_REGION=us-east-1
 ```
 
 ::: notes
-Would be preferrable to use Vault, but if you don't have it, not reason to not be safe
+Would be preferable to use Vault, but if you don't have it, not reason to not be safe
 :::
 
 # Bootstrap Continued {data-background-image="https://c1.staticflickr.com/3/2594/4155223042_87b5663358_o.jpg"}
